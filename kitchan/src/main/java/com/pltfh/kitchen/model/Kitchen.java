@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Document
 @Data
-public class Kitchan {
+public class Kitchen {
 	@Id
 	private String id;
 	@Indexed
@@ -20,7 +20,7 @@ public class Kitchan {
 	private String kitchenDescription;
 	private boolean hasDelivery;
 	@DBRef
-	private List<KitchanImages> kitchanImages;
+	private List<KitchenImages> kitchanImages;
 	@DBRef
 	private Location kitchanLocation;
 	

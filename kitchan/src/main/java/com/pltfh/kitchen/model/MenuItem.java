@@ -1,22 +1,21 @@
 package com.pltfh.kitchen.model;
 
-import java.util.List;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import lombok.Data;
+
 @Document
-public class Location {
+@Data
+public class MenuItem {
+	
 	@Id
 	private String id;
 	@Indexed
-	private String locationName;
-	@DBRef
-	private City city;
-	@DBRef
-	private List<Kitchen> kitchans;
-	
+	private String itemName;
+	private String itemImage;
+	private double qty;
+	private double unitPrice;
 
 }
